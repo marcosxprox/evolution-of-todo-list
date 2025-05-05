@@ -22,7 +22,7 @@ def listar_tarefas():
         status=t.status
     ) for t in tarefas]
 
-@router.delete("/tarefa/{id}")
+@router.delete("/tarefa/{tarefa_id}")
 def remover_tarefa(tarefa_id:int):
     tarefa = servico.db.query(Tarefa).filter(Tarefa.id == tarefa_id).first()
     if not tarefa:
@@ -31,7 +31,7 @@ def remover_tarefa(tarefa_id:int):
     servico.db.commit()
     return {"mensagem": "Tarefa removida com sucesso"}
 
-@router.put("/tarefa/{id}")
+@router.put("/tarefa/{tarefa_id}")
 def concluir_tarefa(tarefa_id:int):
     tarefa = servico.db.query(Tarefa).filter(Tarefa.id == tarefa_id).first()
     if not tarefa:
