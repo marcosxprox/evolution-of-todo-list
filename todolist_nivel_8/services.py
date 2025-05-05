@@ -1,6 +1,6 @@
 import json
 from .schemas import TarefaBase
-from models import Tarefa, SessionLocal
+from .models import Tarefa, SessionLocal
 
 class ListaTarefas:
 

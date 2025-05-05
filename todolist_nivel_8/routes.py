@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from .schemas import TarefaBase, TarefaResposta
-from services import ListaTarefas
-from models import Tarefa
+from .services import ListaTarefas
+from .models import Tarefa
 from typing import List
 
 router = APIRouter()
