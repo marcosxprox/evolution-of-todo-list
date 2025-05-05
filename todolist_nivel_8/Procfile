@@ -1,0 +1,1 @@
+web: uvicorn todolist_nivel_8.main:app --host 0.0.0.0 --port $PORT
