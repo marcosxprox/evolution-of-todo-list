@@ -1,4 +1,4 @@
-from schemas import TarefaBase
+from .schemas import TarefaBase
 from services import ListaTarefas
 from fastapi import FastAPI
 from routes import router
